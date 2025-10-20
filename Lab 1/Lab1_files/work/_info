@@ -1,0 +1,218 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/joeyk/Documents/EE469/Lab 1/Lab1_files
+vD_FF
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1760650542
+!i10b 1
+!s100 L7e85alTTj03I<2SWKmiU0
+IF^<Q@J7HjflAccmoCjAGW3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 D_FF_sv_unit
+S1
+R0
+w1759427262
+8./D_FF.sv
+F./D_FF.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1760650541.000000
+!s107 ./D_FF.sv|
+!s90 -reportprogress|300|./D_FF.sv|
+!i113 1
+Z5 tCvgOpt 0
+n@d_@f@f
+vdecoder
+R1
+Z6 !s110 1760650543
+!i10b 1
+!s100 7IgIgO9`ZlgUZ4E_J9JXc1
+I9M<Z?[obhe;<3;?g>3BMc3
+R3
+!s105 decoder_sv_unit
+S1
+R0
+w1760059478
+8./decoder.sv
+F./decoder.sv
+L0 5
+R4
+r1
+!s85 0
+31
+Z7 !s108 1760650543.000000
+!s107 ./decoder.sv|
+!s90 -reportprogress|300|./decoder.sv|
+!i113 1
+R5
+vmux2to1
+R1
+R2
+!i10b 1
+!s100 f=f5J6I3?KcfDb>nD2]g=2
+I?69RBJC;5WaaY@]W`@Y>H3
+R3
+!s105 mux2to1_sv_unit
+S1
+R0
+w1760059177
+8./mux2to1.sv
+F./mux2to1.sv
+L0 3
+R4
+r1
+!s85 0
+31
+Z8 !s108 1760650542.000000
+!s107 ./mux2to1.sv|
+!s90 -reportprogress|300|./mux2to1.sv|
+!i113 1
+R5
+vmux2to1_64bit
+R1
+R2
+!i10b 1
+!s100 ABozh7m<833_12QF1jNi63
+I>i;`Og_o;_hd;b7h4H_O20
+R3
+!s105 mux2to1_64bit_sv_unit
+S1
+R0
+w1760059200
+8./mux2to1_64bit.sv
+F./mux2to1_64bit.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R8
+!s107 ./mux2to1_64bit.sv|
+!s90 -reportprogress|300|./mux2to1_64bit.sv|
+!i113 1
+R5
+vmux32to1
+R1
+R2
+!i10b 1
+!s100 N?:7z05lJQm=PeICYQOTV3
+IF51ihg5[7eiOPTf]EB?gk1
+R3
+!s105 mux32to1_sv_unit
+S1
+R0
+w1760059352
+8./mux32to1.sv
+F./mux32to1.sv
+L0 5
+R4
+r1
+!s85 0
+31
+R8
+!s107 ./mux32to1.sv|
+!s90 -reportprogress|300|./mux32to1.sv|
+!i113 1
+R5
+vregfile
+R1
+R6
+!i10b 1
+!s100 SR9g]D6V0[mCLHUOYPL>Q2
+I<ofjF;DSMNB3MI[1nZPib1
+R3
+!s105 regfile_sv_unit
+S1
+R0
+w1760059937
+8./regfile.sv
+F./regfile.sv
+L0 8
+R4
+r1
+!s85 0
+31
+R7
+!s107 ./regfile.sv|
+!s90 -reportprogress|300|./regfile.sv|
+!i113 1
+R5
+vregister
+R1
+R2
+!i10b 1
+!s100 8HYN;5@<TlnhOP][oG3FU1
+IC7B0VU_[F?mmn_;S]d;=L1
+R3
+!s105 register_sv_unit
+S1
+R0
+w1760059729
+8./register.sv
+F./register.sv
+L0 4
+R4
+r1
+!s85 0
+31
+R8
+!s107 ./register.sv|
+!s90 -reportprogress|300|./register.sv|
+!i113 1
+R5
+vregstim
+R1
+R6
+!i10b 1
+!s100 mnNP6WmMNN`:BKRdkj59O3
+IAUC`F^V5YR;TL0UX9T4=b0
+R3
+!s105 regstim_sv_unit
+S1
+R0
+w1760083517
+8./regstim.sv
+F./regstim.sv
+L0 4
+R4
+r1
+!s85 0
+31
+R8
+!s107 ./regstim.sv|
+!s90 -reportprogress|300|./regstim.sv|
+!i113 1
+R5
+vselector
+R1
+R6
+!i10b 1
+!s100 4Bblh?eUfUY5oRozi0>2z3
+I;@fbEbQmog9W1<fOmeX@01
+R3
+!s105 selector_sv_unit
+S1
+R0
+w1760059605
+8./selector.sv
+F./selector.sv
+L0 5
+R4
+r1
+!s85 0
+31
+R7
+!s107 ./selector.sv|
+!s90 -reportprogress|300|./selector.sv|
+!i113 1
+R5
