@@ -1,0 +1,24 @@
+module giant_or(in, out)
+	input logic [63:0] in;
+	output logic out;
+		
+	logic [15:0] middle1;
+	logic [3:0] middle2;
+	
+	genvar i;
+	generate
+	  for (i = 0; i < 16; i++) begin : ors
+			or o1 (middle1[i], in[i], in[i+1], in[i+2], in[i+3]);
+	  end
+	endgenerate
+	
+	generate
+	  for (i = 0; i < 4; i++) begin : ors
+			or o2 (middle2[i], middle1[i], middle1[i+1], middle1[i+2], middle1[i+3]);
+	  end
+	endgenerate
+	
+	or o3 (out, middle2[i], middle2[i+1], middle2[i+2], middle2[i+3]);
+
+	
+endmodule

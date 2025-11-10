@@ -1,0 +1,28 @@
+module decoder8to1 (, cntrl, out);
+
+    input logic ;
+	 input logic [2:0] cntrl;
+	 output logic [7:0] out;
+	 
+	 logic [1:0] level1;
+	 logic [3:0] level2;
+	 genvar i;
+
+    //1 → 2
+    selector s1 (.in(1b'1), .sel(cntrl[2]), .out1(level1[1]), .out2(level1[0]));
+	 
+	 //2 → 4
+    generate
+        for (i = 0; i < 2; i++) begin : L2
+            selector s2 (.in(level1[i]), .sel(cntrl[1]), .out1(level2[(2*i)+1]), .out2(level2[2*i]));
+        end
+    endgenerate
+	 
+	 //4 → 8
+    generate
+        for (i = 0; i < 4; i++) begin : L3
+            selector s3 (.in(level4[i]), .sel(cntrl[0]), .out1(out[(2*i)+1]), .out2(out[2*i]));
+        end
+    endgenerate
+	 
+endmodule

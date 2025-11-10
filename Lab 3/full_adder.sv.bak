@@ -1,0 +1,17 @@
+module full_adder (a, b, ci, co, sum);
+	input logic a, b, ci;
+	output logic co, sum;
+	
+	logic t1, t2, t3, t4;
+	
+	xor x1 (a, b, t1);
+	xor x2 (t1, ci, sum);
+	
+	nand n1(a, ci, t2);
+	nand n2(a, b, t3);
+	nand n3(b, ci, t4);
+	
+	nand n4(t2, t3, t4, co);
+	
+	
+endmodule

@@ -1,0 +1,19 @@
+module adder_64bit (a, b, ci, co, sum);
+	input logic [63:0] a, b;
+	input logic ci;
+	output logic [63:0] sum;
+	output logic co;
+	
+	logic [62:0] carry;
+
+	full_adder add1 (a[0], b[0], ci, carry[0], sum[0]);
+	genvar i;
+	generate
+	  for (i = 1; i < 63; i++) begin : adders
+			full_adder add2 (a[i], b[i], carry[i-1], carry[i], sum[i]);
+	  end
+	endgenerate
+	full_adder add3 (a[63], b[63], carry[62], co, sum[63]);
+	
+	
+endmodule
