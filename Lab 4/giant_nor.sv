@@ -1,0 +1,26 @@
+// a module representing a giant nor gate that takes a 64 bit input in and 
+// outputs 1 bit out. 
+module giant_nor(in, out);
+	input logic [63:0] in;
+	output logic out;
+		
+	logic [15:0] middle1;
+	logic [3:0] middle2;
+	
+	genvar i;
+	generate
+	  for (i = 0; i < 16; i++) begin : ors
+			or o1 (middle1[i], in[4*i], in[4*i+1], in[4*i+2], in[4*i+3]);
+	  end
+	endgenerate
+	
+	generate
+	  for (i = 0; i < 4; i++) begin : ors2
+			or o2 (middle2[i], middle1[4*i], middle1[4*i+1], middle1[4*i+2], middle1[4*i+3]);
+	  end
+	endgenerate
+	
+	nor o3 (out, middle2[0], middle2[1], middle2[2], middle2[3]);
+
+	
+endmodule

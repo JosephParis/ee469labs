@@ -1,5 +1,0 @@
-module reg_file (read_reg_1, read_reg_2, write_reg, write_data, data_1, data_2, reset, clk);
-  output reg data_1, data_2;
-  input read_reg_1, read_reg_2, write_reg, write_data, reset, clk;
-
-endmodule
